@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lpudark">
+<ImageView
+    android:id="@+id/company"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/img_2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ImageApp"
+            android:textSize="32sp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- Image Slider -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/exploreImagesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore Images"
+        android:backgroundTint="@color/lpu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RecyclerView for Fetched Images -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fetchedImagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_fetched_image" />
+
+</LinearLayout>

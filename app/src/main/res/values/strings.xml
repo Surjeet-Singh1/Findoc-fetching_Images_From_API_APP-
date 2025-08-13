@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AssigmentApp</string>
+    <string name="slider_image_description">Slider Image</string>
+    <!-- other strings -->
+</resources>
